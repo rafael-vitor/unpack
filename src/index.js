@@ -1,5 +1,5 @@
 import { run } from './app';
 
-import './main.css';
+import './main.scss';
 
 run();
