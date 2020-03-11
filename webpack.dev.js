@@ -8,4 +8,12 @@ module.exports = merge(common, {
     path: path.resolve(__dirname, 'dist'),
   },
   mode: 'development',
+  module: {
+    rules: [
+      {
+        test: /\.scss$/,
+        use: ['style-loader', 'css-loader', 'sass-loader'],
+      }
+    ]
+  },
 });
