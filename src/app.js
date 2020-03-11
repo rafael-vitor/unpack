@@ -1,18 +1,3 @@
-const colorClasses = [
-  'is-white',
-  'is-light',
-  'is-dark',
-  'is-black',
-];
-
-const decreaseButton = document.getElementById('decrease-btn');
-
-const increaseButton = document.getElementById('increase-btn');
-
-const hero = document.getElementById('hero');
-
-hero.classList.toggle(colorClasses[1]);
-
 let currentColor = colorClasses[1];
 decreaseButton.addEventListener('click', () => {
   let nextColor;
