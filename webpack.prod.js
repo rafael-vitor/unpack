@@ -3,6 +3,7 @@ const merge = require('webpack-merge');
 const common = require('./webpack.common.js');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const OptimizeCssAssetsWebpackPlugin = require('optimize-css-assets-webpack-plugin')
 
 module.exports = merge(common, {
   output: {
@@ -37,6 +38,9 @@ module.exports = merge(common, {
     ]
   },
   optimization: {
+    minimizer: [
+      new OptimizeCssAssetsWebpackPlugin(),
+    ],
     splitChunks: {
       cacheGroups: {
         vendor: {
