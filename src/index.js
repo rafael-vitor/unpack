@@ -1,1 +1,3 @@
-alert('this is the river of the night');
+import { run } from './app';
+
+run();
